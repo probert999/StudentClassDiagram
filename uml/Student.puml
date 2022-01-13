@@ -1,0 +1,21 @@
+@startuml
+skinparam classAttributeIconSize 0
+class Student  {
+  - String name
+  - char grade
+  - int group
+  - String secretNickName
+  - String GRADES = "FDECBA"
+
+  + Student (name : String, grade : char, group : int)
+  + getName() : String
+  + getGroup() : int
+  + getGrade() : char
+  + upgrade() : void
+  + downgrade() : void
+  - isValidGrade(grade : char)
+  - isValidGroup(group : int)
+  - updateGrade(changeBy : int)
+
+}
+@enduml
