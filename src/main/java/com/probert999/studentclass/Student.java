@@ -28,6 +28,10 @@ public class Student {
     public char getGrade() {
         return grade;
     }
+    
+    public int getGroup() {
+        return group;
+    }
 
     public void upgrade() {
         if (GRADES.indexOf(grade) != GRADES.length() - 1) {
@@ -41,10 +45,6 @@ public class Student {
         }
     }
 
-    public int getGroup() {
-        return group;
-    }
-
     private void updateGrade(int changeBy) {
         grade = GRADES.charAt(GRADES.indexOf(grade) + changeBy);
     }
@@ -56,6 +56,4 @@ public class Student {
     private boolean isValidGroup(int group) {
         return (group >= 1 && group <= 5 ? true : false);
     }
-
-
 }

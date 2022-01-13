@@ -5,7 +5,7 @@ class Student  {
   - char grade
   - int group
   - String secretNickName
-  - String GRADES = "FDECBA"
+  - String GRADES = "FEDCBA"
 
   + Student (name : String, grade : char, group : int)
   + getName() : String

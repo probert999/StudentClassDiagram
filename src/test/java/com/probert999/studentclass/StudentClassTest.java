@@ -1,6 +1,5 @@
 package com.probert999.studentclass;
 
-import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -16,11 +15,10 @@ public class StudentClassTest {
         Student student = new Student("Paul", 'F', 5);
 
         assertEquals("Incorrect name set", "Paul", student.getName());
-
-
         assertEquals("Incorrect grade set", 'F', student.getGrade());
-
+        assertEquals("Incorrect group set", 5, student.getGroup());
     }
+
 
     @Test
     public void testCreateStudentWithInvalidGrade() {
@@ -41,22 +39,22 @@ public class StudentClassTest {
         Student student = new Student("Paul", 'F', 5);
 
         student.upgrade();
-        assertEquals("Incorrect grade after upgrade", 'E', student.getGrade());
+        assertEquals("Incorrect grade after upgrade from F", 'E', student.getGrade());
 
         student.upgrade();
-        assertEquals("Incorrect grade after upgrade", 'D', student.getGrade());
+        assertEquals("Incorrect grade after upgrade from E", 'D', student.getGrade());
 
         student.upgrade();
-        assertEquals("Incorrect grade after upgrade", 'C', student.getGrade());
+        assertEquals("Incorrect grade after upgrade from D", 'C', student.getGrade());
 
         student.upgrade();
-        assertEquals("Incorrect grade after upgrade", 'B', student.getGrade());
+        assertEquals("Incorrect grade after upgrade from C", 'B', student.getGrade());
 
         student.upgrade();
-        assertEquals("Incorrect grade after upgrade", 'A', student.getGrade());
+        assertEquals("Incorrect grade after upgrade from B", 'A', student.getGrade());
 
         student.upgrade();
-        assertEquals("Incorrect grade after upgrade", 'A', student.getGrade());
+        assertEquals("Incorrect grade after upgrade attempt from A", 'A', student.getGrade());
 
     }
 
@@ -66,31 +64,23 @@ public class StudentClassTest {
         Student student = new Student("Paul", 'A', 5);
 
         student.downgrade();
-        assertEquals("Incorrect grade after downgrade", 'B', student.getGrade());
+        assertEquals("Incorrect grade after downgrade from A", 'B', student.getGrade());
 
         student.downgrade();
-        assertEquals("Incorrect grade after downgrade", 'C', student.getGrade());
+        assertEquals("Incorrect grade after downgrade from B", 'C', student.getGrade());
 
         student.downgrade();
-        assertEquals("Incorrect grade after downgrade", 'D', student.getGrade());
+        assertEquals("Incorrect grade after downgrade from C", 'D', student.getGrade());
 
         student.downgrade();
-        assertEquals("Incorrect grade after downgrade", 'E', student.getGrade());
+        assertEquals("Incorrect grade after downgrade from D", 'E', student.getGrade());
 
         student.downgrade();
-        assertEquals("Incorrect grade after downgrade", 'F', student.getGrade());
+        assertEquals("Incorrect grade after downgrade from E", 'F', student.getGrade());
 
         student.downgrade();
-        assertEquals("Incorrect grade after downgrade", 'F', student.getGrade());
+        assertEquals("Incorrect grade after attempt to downgrade from F", 'F', student.getGrade());
 
-    }
-
-
-    @Test
-    public void isGroupSet() {
-        Student student = new Student("Dave", 'C', 1);
-
-        assertEquals("Group value is incorrect", 1, student.getGroup());
     }
 
 }
