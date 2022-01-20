@@ -1,4 +1,4 @@
-package com.probert999.studentclass;
+package com.probert999.studentclass.model;
 
 public class Student {
 
@@ -28,7 +28,7 @@ public class Student {
     public char getGrade() {
         return grade;
     }
-    
+
     public int getGroup() {
         return group;
     }

@@ -1,11 +1,10 @@
 package com.probert999.studentclass;
 
+import com.probert999.studentclass.model.Student;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
-
-import org.junit.runners.JUnit4;
 
 public class StudentClassTest {
 
