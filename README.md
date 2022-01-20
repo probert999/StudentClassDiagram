@@ -1,50 +1,23 @@
-# A Short Exercise to Explore Object-Oriented Programming - Encapsulation
+# UML Class diagram exercise
 
----
-## Overview
+Creating a UML class diagram from acceptance critera, then implementing and testing the class.
 
-This repository is a short exercise designed for you to explore **Encapsulation** which is one of the
-four pillars of Object-Oriented Programming (OOP).
+PlantUML used for the class diagram.  Implementation in Java.
 
----
-## 📖 Instructions
+### Business Acceptance Criteria:
+<ul>
+<li>A Student must have a name
+<li>A Student must have a single grade
+<li>The value for grade must be one of the following: A, B, C, D, E, F
+<li>A Student must have a single group
+<li>The value for group must be one of the following: 1, 2, 3, 4, 5
+<li>A Student has a secretNickName and is set to “MySecretNickName”
+<li>The school should be able to initialise the Student Java Class with an initial value for name, grade and group.
+<li>The school should be able to get the Student’s grade securely
+<li>The school should be able to get the Student’s name securely
+<li>The school should NOT be able to get the Student’s secretNickName
+<li>The school should be able to call methods to upgrade and downgrade the Student’s grade.
+<li>For example, if the Student has a current grade of “B”, an upgrade will result in the grade being set to “A”.
+<li>If the Student has a current grade of “C”, a downgrade will result in the grade being set to “D”.
+</ul>
 
-- Fork this repository
-  
-
-- To run the program, go to the [Main](src/main/java/com/techreturners/encapsulation/bankaccount/app/Main.java) class which 
-  is the entry point and run it using IntelliJ
-  
-
-- There are two models `DodgyBankAccount` and `SecureBankAccount`, these are located in the 
-  [model](src/main/java/com/techreturners/encapsulation/bankaccount/model) directory.
-
----
-## 🤓 Study Prompts
-
-Use the following questions to guide your exploration and learning! 🗺
-
-- Run the `main` method on the `Main` class, what is it doing? What is being outputted to the console?
-
-
-- Look at the `DodgyBankAccount`, this class is not well-encapsulated.
-  Can you note down the problems with how the class is designed, and the ways it is being misused?
-  
-
-- Compare and contrast the `DodgyBankAccount` and the `SecureBankAccount`, how is the `SecureBankAccount` different to 
-the `DodgyBankAccount`? How is it designed to prevent it from being misused? Are there instances of better method names
-  for clearer abstraction?
-  
----
-## 🐸 Extension Challenge
-
-- Now that you've had the chance to explore a well-encapsulated vs. poorly-encapsulated class,
-your next challenge is to put your newly minted skills into practice 💪!
-  
-- Refactor the `WeatherReporter` class located in the [model](src/main/java/com/techreturners/encapsulation/bankaccount/model) directory.
-  
-- You may want to think about Encapsulation here. Do the methods follow the Single Responsibility Principle (SRP)? Are the method names suitable?
-  Are there any magic numbers / hardcoded numbers in the code that needs to be represented by a constant?
-  Are there better ways to write the code?
-  
-- As an added challenge, could you write some unit tests to test the class' methods?
